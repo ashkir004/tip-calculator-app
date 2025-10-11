@@ -5,40 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+<body class="space-mono-bold">
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <header>
+    <img src="/images/logo.svg" alt="Splitter Logo" class="logo" />
+  </header>
+  
+  <main>
+
+    <form action="#" novalidate>
+      <div class="form-main">
+
+        <div class="amount-input">
+          <label for="bill">Bill<strong class="no-zero">Can't be Zero</strong></label>
+          <input type="number" id="bill" name="bill" value="" placeholder="0" min="1" class="bill no-spin space-mono-bold">
+        </div>
+      
+        <div class="tip-rate-wrapper">
+          <label for="tip-rate">Select Tip %</label>
+          <div name="tip-rate" id="tip-rate" class="tip-rate">
+            <button class="tip-btn space-mono-bold normal" value="5">5%</button>
+            <button class="tip-btn space-mono-bold normal" value="10">10%</button>
+            <button class="tip-btn space-mono-bold normal" value="15">15%</button>
+            <button class="tip-btn space-mono-bold normal" value="25">25%</button>
+            <button class="tip-btn space-mono-bold normal" value="50">50%</button>
+            <button class="tip-btn space-mono-bold custom" value="">Custom</button>
+          </div>
+        </div>
+      
+        <div class="amount-input">
+          <label for="people">Number of People<strong class="no-zero">Can't be Zero</strong></label>
+          <input type="number" id="people" name="people" value="" placeholder="0" min="1" class="people no-spin space-mono-bold">
+        </div>
+
+      </div>
+      <div class="tip-display">
+        <div class="tip-display-main">
+          <div class="tip-amount-wrapper">
+            <p class="tip space-mono-bold">Tip Amount<span class="space-mono-bold per-person">/ person</span></p>
+            <p class="tip-amount space-mono-bold">$0.00</p>
+          </div>
+          
+          <div class="total-split-wrapper">
+            <p class="total-split space-mono-bold">Total<span class="space-mono-bold per-person">/ person</span></p>
+            <p class="total-split-amount space-mono-bold">$0.00</p>
+          </div>
+        </div>
+        
+        <button type="reset" id="reset" class="reset space-mono-bold">Reset</button>
+      </div>
+    </form>
+  
+
+</main>
+  
+
 </body>
 </html>
