@@ -425,3 +425,8 @@ form {
   flex-direction: column;
   align-items: flex-start;
 }
+
+html {
+  visibility: visible;
+  opacity: 1;
+}
