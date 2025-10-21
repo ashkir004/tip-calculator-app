@@ -394,7 +394,6 @@ form {
 
   .tip-display {
     padding: var(--spacing-300) var(--spacing-400);
-    /* gap: var(--spacing-1600); */
     flex: 1;
     overflow: hidden;
   }

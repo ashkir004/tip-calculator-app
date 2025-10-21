@@ -195,8 +195,7 @@ function showError(
   { billError, peopleError, tipRateError } = errorObject,
   input
 ) {
-  // console.log(`error-${name}: ${errorMsg}`);
-
+  
   if (name === "bill") {
     billError.classList.remove("hidden");
     billError.textContent = errorMsg;
@@ -276,10 +275,6 @@ function updateUI(
 
   tipAmountPerPerson = formatter.format(tipAmountPerPerson);
   totalSplitPerPerson = formatter.format(totalSplitPerPerson);
-
-  console.log(
-    `${countDigits(tipAmountPerPerson)}: ${countDigits(totalSplitPerPerson)}`
-  );
 
   if (
     countDigits(totalSplitPerPerson) >= 10 ||
