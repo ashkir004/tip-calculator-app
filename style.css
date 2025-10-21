@@ -41,12 +41,41 @@
   --radii-25: calc(25 / 16 * 1rem);
 }
 
-/* TYPOGRAPHY */
-body {
+
+html, body {
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
-  /* padding: 8px; */
+  background-color: var(--grey-200);
 }
 
+/* LAYOUT */
+header {
+  text-align: center;
+  margin: 4rem 0 3rem 0;
+}
+
+header .logo {
+  display: block;
+  width: 5.5rem;
+  height: 3.5rem;
+  margin-inline: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  padding: var(--spacing-400) var(--spacing-300);
+  border-radius: var(--radii-25) var(--radii-25) 0 0;
+  background-color: var(--white);
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+}
+
+/* TYPOGRAPHY */
 .space-mono-bold {
   font-family: "Space Mono", Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -288,38 +317,6 @@ input.invalid {
   gap: var(--spacing-200);
 }
 
-/* LAYOUT */
-
-body {
-  background-color: var(--grey-200);
-}
-
-header {
-  text-align: center;
-  margin: 4rem 0 3rem 0;
-}
-
-header .logo {
-  display: block;
-  width: 5.5rem;
-  height: 3.5rem;
-  margin-inline: auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-400);
-  padding: var(--spacing-400) var(--spacing-300);
-  border-radius: var(--radii-25) var(--radii-25) 0 0;
-  background-color: var(--white);
-}
-
-.form-main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-400);
-}
 
 @media (min-width: 48rem) {
 
